@@ -1,0 +1,7 @@
+apiVersion: dummy.interview.com/v1alpha1
+kind: Dummy
+metadata:
+  name: dummy1
+  namespace: default
+spec:
+  message: "I'm just a dummy"

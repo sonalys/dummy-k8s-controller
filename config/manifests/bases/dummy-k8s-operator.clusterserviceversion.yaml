@@ -1,0 +1,46 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: dummy-k8s-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Dummy is the Schema for the dummies API
+      displayName: Dummy
+      kind: Dummy
+      name: dummies.dummy.interview.com
+      version: v1alpha1
+  description: Manages a operator with a nginx pod
+  displayName: Dummy K8S Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - dummy
+  - poc
+  links:
+  - name: Dummy K8s Operator
+    url: https://dummy-k8s-operator.domain
+  maturity: alpha
+  provider:
+    name: Dummy K8S Operator
+    url: https://github.com/sonalys/dummy-k8s-operator
+  version: 0.0.0
