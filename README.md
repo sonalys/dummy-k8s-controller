@@ -46,10 +46,17 @@ which provide a reconcile function responsible for synchronizing resources until
 make install
 ```
 
-2. Run your controller (this will run in the foreground, so switch to a new terminal if you want to leave it running):
+2. Running it:
+
+You can run it locally via:
 
 ```sh
 make run
+```
+Or use the docker image through:
+
+```sh
+make deploy IMG=ghcr.io/sonalys/dummy-k8s-operator:latest
 ```
 
 **NOTE:** You can also run this in one step by running: `make install run`
